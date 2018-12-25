@@ -1,1 +1,1 @@
-# [Github page](https://ali-x.github.io/js-closures/)
+# [Github page](https://ali-x.github.io/js-this/)

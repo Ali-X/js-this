@@ -11,4 +11,4 @@ let user = {
 user.getName = getName;
 
 console.log("Context of object: " + user.getName());
-console.log("Clobal context: " + getName());
+console.log("Global context: " + getName());
