@@ -6,7 +6,7 @@ function City(name, population, country) {
     return this.population;
   };
   this.getCityName = function () {
-    return this.country;
+    return this.name;
   };
   this.addCitizen = function () {
     this.population++;
