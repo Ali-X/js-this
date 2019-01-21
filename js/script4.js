@@ -1,14 +1,16 @@
+"use strict";
+
 function City(name, population, country) {
   this.name = name;
   this.population = population;
   this.country = country;
-  this.getPopulation = function () {
+  this.getPopulation = function() {
     return this.population;
   };
-  this.getCityName = function () {
+  this.getCityName = function() {
     return this.name;
   };
-  this.addCitizen = function () {
+  this.addCitizen = function() {
     this.population++;
   };
 }

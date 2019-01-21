@@ -1,3 +1,5 @@
+"use strict";
+
 function Auto(brand, year, mileage, color) {
   this.brand = brand;
   this.year = year;
@@ -6,23 +8,23 @@ function Auto(brand, year, mileage, color) {
   this.ignited = false;
   this.run = false;
   this.fuel = 0;
-  this.isIgnited = function () {
+  this.isIgnited = function() {
     return this.ignited;
   };
-  this.hasFuel = function () {
+  this.hasFuel = function() {
     return this.fuel !== 0;
   };
-  this.addFuel = function () {
+  this.addFuel = function() {
     this.fuel = 100;
   };
-  this.ignite = function () {
+  this.ignite = function() {
     if (this.hasFuel()) {
       this.ignited = true;
     } else {
       console.log("Hужно заправить автомобиль");
     }
   };
-  this.runAuto = function () {
+  this.runAuto = function() {
     if (this.isIgnited()) {
       this.run = true;
       console.log("Машина " + this.brand + " марки " + this.color + " цвета поехала!");
@@ -30,7 +32,7 @@ function Auto(brand, year, mileage, color) {
       console.log("Включите вначале зажигание");
     }
   };
-  this.stop = function () {
+  this.stop = function() {
     if (this.isIgnited()) {
       this.run = false;
       this.ignited = false;

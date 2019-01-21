@@ -1,3 +1,5 @@
+"use strict";
+
 function getDoubled() {
   return this.number * 2;
 }

@@ -9,33 +9,33 @@ function ask(question, answer, ok, fail) {
   }
 }
 
-var user = {
+let user = {
   login: 'Andrew',
   password: '12345',
 
-  loginOk: function () {
+  loginOk: function() {
     console.log(this.login + ' - login success');
   },
 
-  loginFail: function () {
+  loginFail: function() {
     console.log(this.login + ' - login failed');
   },
 
-  checkPasswordWithBind: function () {
+  checkPasswordWithBind: function() {
     ask("Your password?", this.password, this.loginOk.bind(this), this.loginFail.bind(this));
   },
 
-  checkPasswordWithClosure: function () {
+  checkPasswordWithClosure: function() {
     let self = this;
-    ask("Your password?", self.password, function () {
+    ask("Your password?", self.password, function() {
       self.loginOk()
-    }, function () {
+    }, function() {
       self.loginFail()
     });
   }
 };
 
-var user2 = user;
+let user2 = user;
 user = null;
 
 console.log("user2 check with bind");
