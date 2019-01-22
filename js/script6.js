@@ -1,6 +1,6 @@
 "use strict";
 
-;(function() {
+(function() {
   let imgs = [{image: 'car.jpg', alt: 'Car'}, {image: 'apple.jpg', alt: 'Apple'}];
   let currPos = 0;
 
@@ -46,6 +46,10 @@
   function insertSlide(slide, position) {
     if (position > 0) {
       imgs.splice(position - 1, 0, slide);
+
+      if (position - 1 <= currPos) {
+        ++currPos;
+      }
     }
   }
 
