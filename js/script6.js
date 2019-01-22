@@ -32,7 +32,7 @@
   }
 
   function getSlide(slideNumber) {
-    if (slideNumber > 0 && slideNumber <= imgs.length - 1) {
+    if (slideNumber > 0 && slideNumber <= imgs.length) {
       currPos = slideNumber - 1;
     }
 
@@ -56,6 +56,10 @@
   function removeSlide(position) {
     if (position > 0) {
       imgs.splice(position - 1, 1);
+
+      if (position - 1 <= currPos && currPos > 0) {
+        --currPos;
+      }
     }
   }
 }());
